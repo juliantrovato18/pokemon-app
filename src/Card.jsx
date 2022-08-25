@@ -1,10 +1,20 @@
-export const Card = ()=>{
+export const Card = ({pokemon, loading, infoPoke})=>{
     return (
         <>
-            <div className="card">
-                <h2>Charmander</h2>
-                <img className="img" src="../../img/char.svg" alt="" />
-            </div>
+            {
+                loading? <h1>Loading...</h1>:
+                pokemon.map((item)=>{
+                    return (
+                        <>
+                            <div key={item.id} className="card" onClick={()=>infoPoke(item)}>
+                                <h2>{item.id}</h2>
+                                <img className="img" src={item.sprites.front_default} alt="" />
+                                <h2>{item.name}</h2>
+                            </div>
+                        </>
+                    )
+                })
+            }
         </>
     )
 }
