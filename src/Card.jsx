@@ -4,6 +4,7 @@ export const Card = ({pokemon, loading, infoPoke})=>{
             {
                 loading? <h1>Loading...</h1>:
                 pokemon.map((item)=>{
+                    console.log(item,"array");
                     return (
                         <>
                             <div key={item.id} className="card" onClick={()=>infoPoke(item)}>
