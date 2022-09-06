@@ -17,7 +17,7 @@ export const PokeInfo = ({data})=>{
                     </div>
                     </div>
                     <div className="base-state">
-                        <h3>HP:{data.stats[0].base_stat}</h3>
+                        <h3 className="2">HP:{data.stats[0].base_stat}</h3>
                         <h3>attack:{data.stats[1].base_stat}</h3>
                         <h3>speed:{data.stats[2].base_stat}</h3>
                         <h3>life:{data.stats[3].base_stat}</h3>
